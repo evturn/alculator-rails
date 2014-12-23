@@ -6,12 +6,11 @@
 #header {
 	height: 80px;
 	padding-left: 40px;
-	text-align: center;
-	
+	text-align: center;	
 }
 
-#bac-meter{
-	height: 190px;
+svg {
+	height: 220px;
 }
 
 .chart-color1 {
