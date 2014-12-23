@@ -1,3 +1,8 @@
+
+#main-content {
+	padding-left: 40px;
+}
+
 #alculator-title {
 	text-align: center;
 }
@@ -16,6 +21,7 @@
 
 #header {
 	height: 80px;
+	padding-left: 40px;
 	text-align: center;
 	border-bottom: 1px solid black;
 }
