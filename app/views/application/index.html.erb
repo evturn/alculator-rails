@@ -3,18 +3,20 @@
 	<%= render partial: "navbar" %>
 </div>
 
+<div class="row col-lg-12" id="search-content">
+	<%= render partial: "searches" %>
+</div>
+	
+	
 
 <div class="row col-lg-12" id="main-content">
-<div class="row col-lg-12">
-	<%= render partial: "search" %>
-</div>
 	<div class="col-lg-4" id="column-one">
-	<%= render partial: "bac_meter" %>
-	</div>
-	<div class="col-lg-4" id="column-two">
 		<%= render partial: "alculator" %>
 	</div>
+	<div class="col-lg-4" id="column-two">
+	<%= render partial: "bac_meter" %>
+	</div>
 	<div class="col-lg-4" id="column-three">
-		wine shit
+		<h1>BAC RESULT</h1>
 	</div>
 </div>
