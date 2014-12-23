@@ -20,6 +20,10 @@
 	border-bottom: 1px solid black;
 }
 
+#active {
+	background-color: black;
+}
+
 #beaker {
 	margin-top: -15px;
 }
