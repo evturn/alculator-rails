@@ -6,22 +6,26 @@
 	text-align: center;
 }
 
+#page-title h1 {
+	font-size: 50px;
+}
+
 .georgia {
 	font-family: georgia;
 }
 
 #header {
-	height: 125px;
+	height: 80px;
 	text-align: center;
 	border-bottom: 1px solid black;
 }
 
 #beaker {
-	margin-top: -25px;
+	margin-top: -15px;
 }
 
 #bac-meter{
-	margin-top: -17px;
+	height: 190px;
 }
 
 .chart-color1 {
