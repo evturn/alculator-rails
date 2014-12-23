@@ -9,3 +9,32 @@
 .georgia {
 	font-family: georgia;
 }
+
+#header {
+	height: 125px;
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+#beaker {
+	margin-top: -25px;
+}
+
+#bac-meter{
+	margin-top: -17px;
+}
+
+.chart-color1 {
+  fill: yellow;
+}
+
+.chart-color2 {
+  fill: darkorange;
+}
+
+.chart-color3 {
+  fill: red;
+ }
+.needle {
+	fill: #464A4F;
+}
