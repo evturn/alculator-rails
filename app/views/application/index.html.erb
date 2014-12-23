@@ -1,11 +1,20 @@
 
-
-<div class="row col-md-12" id="header">
+<div class="row col-lg-12" id="header">
 	<%= render partial: "navbar" %>
 </div>
-<div class="row col-md-12" id="main-content">
-	<div class="col-md-4" id="column-one">
+
+<div class="row col-lg-12">
+	<%= render partial: "search" %>
+</div>
+
+<div class="row col-lg-12" id="main-content">
+	<div class="col-lg-4" id="column-one">
+	<%= render partial: "bac_meter" %>
+	</div>
+	<div class="col-lg-4" id="column-two">
 		<%= render partial: "alculator" %>
 	</div>
-	
+	<div class="col-lg-4" id="column-three">
+		wine shit
+	</div>
 </div>

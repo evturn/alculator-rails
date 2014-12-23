@@ -1,15 +1,10 @@
 
-#main-content {
+/*#main-content {
 	padding-left: 40px;
 }
+*/
 
-#alculator-title {
-	text-align: center;
-}
 
-#sex {
-	text-align: center;
-}
 
 #page-title h1 {
 	font-size: 50px;
@@ -23,16 +18,10 @@
 	height: 80px;
 	padding-left: 40px;
 	text-align: center;
-	/*border-bottom: 1px solid black;*/
+	
 }
 
-#active {
-	background-color: black;
-}
 
-#beaker {
-	margin-top: -15px;
-}
 
 #bac-meter{
 	height: 190px;
