@@ -1,24 +1,26 @@
 
 <div id="alculator">
-	<div class="form-group row col-xs-12">
-		<h1><em>ALC</em>ULATOR</h1>
-		<div class="col-xs-1">
+		<div class="row col-md-12" id="alculator-title">
+				<h1><em>ALC</em>ULATOR</h1>
+		</div>
+	<div class="form-group row col-md-12">
+		<div class="col-md-7" id="sex">
 			<label class="radio">MALE</label>
 	  	<input type="radio" value="male" id="male" name="inlineRadioOptions">
 		</div>
-		<div class="col-xs-1">
+		<div class="col-md-1">
 			<label class="radio">FEMALE</label>
 	  	<input type="radio" value="female" id="female" name="inlineRadioOptions">
 		</div>
 	</div>
-	<div class="form-group row col-xs-12">
-		<div class="col-xs-2">
+	<div class="form-group row col-md-12">
+		<div class="col-md-6">
 			<label for="lbs">WEIGHT</label>
-	    <input class="form-control" type="password" id="lbs" placeholder="Lbs">
+	    <input class="form-control input-lg" type="password" id="lbs" placeholder="Lbs">
 		</div>
-		<div class="col-xs-2">
+		<div class="col-md-6">
 			<label for="hours">HOURS</label>
-			<select class="form-control">
+			<select class="form-control input-lg">
 			  <option>1</option>
 			  <option>2</option>
 			  <option>3</option>
@@ -31,10 +33,10 @@
 			</select>
 		</div>
 	</div>
-	<div class="form-group row col-xs-12">
-		<div class="col-xs-2">
+	<div class="form-group row col-md-12">
+		<div class="col-md-6">
 			<label for="drinks">&numero; of DRINKS</label>
-			<select class="form-control">
+			<select class="form-control input-lg">
 			  <option>1</option>
 			  <option>2</option>
 			  <option>3</option>
@@ -46,17 +48,20 @@
 			  <option>9</option>
 			</select>
 		</div>
-		<div class="col-xs-2">
+		<div class="col-md-6">
 			<label for="ABV">ALCOHOL %</label>
-			<input class="form-control" type="text" id="abv" name="abv" placeholder="4.5">
+			<input class="form-control input-lg" type="text" id="abv" name="abv" placeholder="4.5">
 		</div>
 	</div>
-	<div class="form-group row col-xs-12">
-		<div class="col-xs-2">
-			<input class="btn btn-default" type="submit" value="SUBMIT">
+	<div class="form-group row col-md-12">
+		<button type="button" class="btn btn-default btn-lg btn-block">+ ADD MORE DRINKS</button>
+	</div>
+	<div class="form-group row col-md-12">
+		<div class="col-md-6">
+			<input class="btn btn-default btn-lg btn-block" type="submit" value="SUBMIT">
 		</div>
-		<div class="col-xs-2">
-			<input class="btn btn-default" type="reset" value="RESET">
+		<div class="col-md-6 ">
+			<input class="btn btn-default btn-lg btn-block" type="reset" value="RESET">
 		</div>
 	</div>
 </div>
