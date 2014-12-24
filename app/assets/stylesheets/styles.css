@@ -20,16 +20,25 @@ svg {
 }
 
 .chart-color1 {
-  fill: yellow;
+  fill: #689b6e;
 }
 
 .chart-color2 {
-  fill: darkorange;
+  fill: #5a81c1;
 }
 
 .chart-color3 {
-  fill: red;
+  fill: #ead345;
  }
+
+.chart-color4 {
+  fill: #e09e4a;
+ }
+
+ .chart-color5 {
+  fill: #bd574b;
+ }
+
 .needle {
 	fill: #464A4F;
 }
