@@ -75,4 +75,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  brewery_db = BreweryDB::Client.new do |config|
+  config.api_key = ENV['BREWERY_DB_KEY']
 end
