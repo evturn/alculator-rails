@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-
+   @query = brewery_db.search.beers(q: 'IPA')
   end
   
 end
