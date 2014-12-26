@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def index
 
-    query = param['query']
+    query = params['query'].gsub(' ', '+')
     url = "http://api.brewerydb.com/v2/search?q=#{query}&key=#{ENV['BREWERY_DB_KEY']}"
     response = HTTParty.get(url)
 
