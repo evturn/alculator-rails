@@ -1,6 +1,6 @@
 $(function() {
 
-	$('#container').on('click #bac-submit', 
+	$('#bac-submit').on('click #bac-submit-btn', 
 		function(e) {
 			e.preventDefault();
 			$alculator = $('#alculator');
@@ -15,7 +15,7 @@ $(function() {
 						abv: 			$alculator.find("input[name='abv']").val(),
 						}
 					},
-					calculate: function(model) {
+					calculate: function() {
 						rate:      sex === 'male' ? 0.73 : 0.66;
 						var bevOz = drinks * 12;
 						var alcOz = bevOz * (abv * 0.01);
