@@ -10,5 +10,10 @@ class ApplicationController < ActionController::Base
     response = HTTParty.get(url)
 
   end
+
+  def rounds
+    render :json => Round.all
+  end
+
   
 end
