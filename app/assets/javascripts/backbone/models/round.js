@@ -9,3 +9,5 @@ var Round = Backbone.Model.extend({
 		bac: "",
 	}
 });
+
+console.log('Round');

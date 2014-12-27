@@ -1,4 +1,3 @@
-
 $(function() {
 
 	$('#container').on('click #bac-submit', 
@@ -43,6 +42,8 @@ $(function() {
 	});
 
 });
+
+console.log('app');
 
 
 

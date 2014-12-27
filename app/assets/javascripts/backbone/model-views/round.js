@@ -7,3 +7,5 @@ var RoundView = Backbone.View.extend({
 		return this;
 	},
 });
+
+console.log('RoundView');
