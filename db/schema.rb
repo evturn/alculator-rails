@@ -11,9 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141227010911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "rounds", force: true do |t|
+    t.decimal  "drinks",     precision: 8, scale: 2
+    t.decimal  "hours",      precision: 8, scale: 2
+    t.decimal  "bac",        precision: 8, scale: 2
+    t.string   "sex"
+    t.decimal  "rate",       precision: 8, scale: 2
+    t.integer  "lbs"
+    t.decimal  "abv",        precision: 8, scale: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
