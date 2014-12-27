@@ -37,7 +37,7 @@ $(function() {
 						var roundView = new RoundView({
 							model: round
 						});
-
+						$('#bac-container').html(roundView.render().$el);
 					}
 		});
 	});
