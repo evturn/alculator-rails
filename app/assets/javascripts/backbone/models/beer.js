@@ -6,7 +6,6 @@ var Beer = Backbone.Model.extend({
 		icon: "",
 	},
 	url: '/beers',
-	
 	render: function() {
 		var beerModel = this.model.toJSON();
 	}

@@ -17,9 +17,9 @@ class ApplicationController < ActionController::Base
         beers << item
       end
     end
-    selection = beers.first
+    beer = beers.first
     respond_to do |f|
-      f.html { render json: selection }
+      f.html { render json: beer }
     end
   end
 

@@ -1,8 +1,8 @@
+
 $(function() {
 
 var beerView = new BeerView();
 var bacMeterView = new BacMeterView();
-
 
 	$('#liquor-tab').on('click',
 		function(e) {
@@ -24,11 +24,11 @@ var bacMeterView = new BacMeterView();
 
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
-		$beerQuery = $('#beer-query').val();
+		beerQuery = $('#beer-query').val();
 		$.ajax({
 			url: '/beers',
 			data: {
-				query: $beerQuery
+				query: beerQuery
 			},
 			success: function(data) {
 				console.log(data);
