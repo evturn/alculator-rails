@@ -10,4 +10,4 @@ var BacMeterView = Backbone.View.extend({
 	}
 });
 
-console.log('bacMeterView')
+console.log('BacMeterView')
