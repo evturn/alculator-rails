@@ -1,6 +1,6 @@
 $(function() {
 
-var beer = new Beer();
+var beerView = new BeerView();
 
 	$('#bac-submit').on('click #bac-submit-btn', 
 		function(e) {

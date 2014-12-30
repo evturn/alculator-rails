@@ -6,6 +6,10 @@ body {
   color: white;
 }
 
+a {
+	color: white;
+}
+
 h1 {
 	text-align: center;
 	font-size: 75px;
@@ -48,5 +52,5 @@ svg {
  }
 
 .needle {
-	fill: #464A4F;
+	fill: silver;
 }
