@@ -1,13 +1,12 @@
 var BeerView = Backbone.View.extend({
-	tagName: 'div',
+	el: $('#search-container'),
 	initialize: function() {
-	template: _.template($("#beer-search-template").html()),
 		this.render();
 	},
+	template: _.template($("#beerSearchTemplate").html()),
 	render: function() {
-		this.$el.html(this.template);
-		$('#search').append(this.$el);
-		return this;
+		this.$el.html(this.template());
+    return this;
 	}
 });
 

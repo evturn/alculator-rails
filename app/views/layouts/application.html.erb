@@ -7,18 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render partial: "templates/beer_search_template" %>
+
 
 	<script type="text/template" id="bac-template">
 		<h3>BAC %</h3>
 			<h2>&#8776; <%%= bac %></h2>
 	</script>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 <div class="container">
 	<%= yield %>
 </div>
 
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
