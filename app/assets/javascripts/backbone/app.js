@@ -1,6 +1,8 @@
 $(function() {
 
 var beerView = new BeerView();
+var bacMeterView = new BacMeterView();
+
 
 	$('#bac-submit').on('click #bac-submit-btn', 
 		function(e) {
