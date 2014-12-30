@@ -31,6 +31,7 @@ var bacMeterView = new BacMeterView();
 			data: {
 				query: beerQuery
 			},
+			dataType: 'JSON',
 			success: function(data) {
 				beer = new Beer(data);
 				console.log(beer);
