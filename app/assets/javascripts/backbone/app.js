@@ -1,5 +1,7 @@
 $(function() {
 
+var beer = new Beer();
+
 	$('#bac-submit').on('click #bac-submit-btn', 
 		function(e) {
 			e.preventDefault();
