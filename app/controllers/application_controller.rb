@@ -3,24 +3,24 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def index
+  def beer_search
 
     query = params['query']
     url = "http://api.brewerydb.com/v2/search?q=#{query}&key=#{ENV['BREWERY_DB_KEY']}"
-    response = HTTParty.get(url)
-    results = response['data']
+    
     
     beers = []
-    
-    results.each do |item|
+    response = HTTParty.get(url)
+    results = response['data']
+    results.map do |item|
       if item['type'] == 'beer'
         beers << item
       end
     end
-    
-    @selection = beers.first
-
-    render { to_json: @selection }
+    selection = beers.first
+    respond_to do |f|
+      f.html { render json: selection }
+    end
   end
 
   

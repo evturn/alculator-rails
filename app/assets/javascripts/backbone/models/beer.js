@@ -1,9 +1,12 @@
-// var Beer = Backbone.Model.extend({
-// 	url: '/beers',
-// 	defaults: {
-// 		"" : ""
-// 	}
-// 	render: function() {
-// 		var beerView = new BeerView({ model: this })
-// 	}
-// });
+var Beer = Backbone.Model.extend({
+	defaults: {
+		name: "",
+		desc: "",
+		abv: "",
+		icon: "",
+	},
+	url: '/beers',
+	render: function() {
+		var beerModel = this.model.toJSON();	
+	}
+});
