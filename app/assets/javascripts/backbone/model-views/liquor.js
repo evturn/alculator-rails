@@ -1,8 +1,9 @@
 var LiquorView = Backbone.View.extend({
-	el: $('search-container'),
+	el: $('#search-container'),
 	initialize: function() {
-		this.listenTo(this.el, 'click #liquor-tab', this.render)
+		$('#liquor-tab').on('click', this.render());
 	},
+	template: _.template($('#liquorSearchTemplate').html()),
 	render: function() {
 		this.$el.html(this.template());
 		return this;
