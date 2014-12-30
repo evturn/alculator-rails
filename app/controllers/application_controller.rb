@@ -8,8 +8,19 @@ class ApplicationController < ActionController::Base
     query = params['query']
     url = "http://api.brewerydb.com/v2/search?q=#{query}&key=#{ENV['BREWERY_DB_KEY']}"
     response = HTTParty.get(url)
+    results = response['data']
+    
+    beers = []
+    
+    results.each do |item|
+      if item['type'] == 'beer'
+        beers << item
+      end
+    end
+    
+    @selection = beers.first
 
-
+    render { to_json: @selection }
   end
 
   
