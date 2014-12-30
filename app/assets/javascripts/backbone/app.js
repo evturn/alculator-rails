@@ -27,11 +27,13 @@ var bacMeterView = new BacMeterView();
 		beerQuery = $('#beer-query').val();
 		$.ajax({
 			url: '/beers',
+			method: 'get',
 			data: {
 				query: beerQuery
 			},
 			success: function(data) {
-				console.log(data);
+				beer = new Beer(data);
+				console.log(beer);
 			}
 		});
 	});

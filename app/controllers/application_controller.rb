@@ -5,10 +5,9 @@ class ApplicationController < ActionController::Base
 
   def beer
 
-    query = params['query']
+    query = params['query'].gsub(' ', '+')
     url = "http://api.brewerydb.com/v2/search?q=#{query}&key=#{ENV['BREWERY_DB_KEY']}"
-    
-    
+       
     beers = []
     response = HTTParty.get(url)
     results = response['data']
@@ -22,6 +21,5 @@ class ApplicationController < ActionController::Base
       f.html { render json: beer }
     end
   end
-
-  
+ 
 end
