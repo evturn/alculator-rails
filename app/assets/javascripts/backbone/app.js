@@ -35,6 +35,7 @@ var bacMeterView = new BacMeterView();
 			success: function(data) {
 				beer = new Beer(data);
 				console.log(beer);
+				var view = new BarTabView({model: beer});
 			}
 		});
 	});
