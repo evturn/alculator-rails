@@ -4,13 +4,23 @@ var beerView = new BeerView();
 var bacMeterView = new BacMeterView();
 
 
-	$('#tabs').on('click #liquor-tab',
+	$('#liquor-tab').on('click',
 		function(e) {
 			e.preventDefault();
 			var liquorView = new LiquorView();
 	});
 
+	$('#wine-tab').on('click',
+		function(e) {
+			e.preventDefault();
+			var wineView = new WineView();
+	});
 
+	$('#beer-tab').on('click',
+		function(e) {
+			e.preventDefault();
+			var beerView = new BeerView();
+	});
 
 
 
