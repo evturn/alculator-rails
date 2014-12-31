@@ -3,6 +3,7 @@ $(function() {
 
 var beerView = new BeerView();
 var bacMeterView = new BacMeterView();
+var alculatorView = new AlculatorView();
 
 	$('#liquor-tab').on('click',
 		function(e) {
