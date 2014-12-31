@@ -22,25 +22,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
-  def create
-    round = Round.create(round_params)
-    round.calculate
-    round.save
-    render json: round
-  end
-
-  private
-
-  def calculator
-    round = Round.create(round_params)
-    round.calculate
-    round.save
-    render json: round
-  end
-
-  def round_params
-    params.require(:round).permit(:drinks, :hours, :sex, :lbs, :abv)
-  end
+  
  
 end

@@ -1,11 +1,11 @@
 var roundModel = new Round();
 var startRoundView = new RoundView({model: roundModel});
+var alculatorView = new AlculatorView();
 
 $(function() {
 
 var beerView = new BeerView();
 var bacMeterView = new BacMeterView();
-var alculatorView = new AlculatorView();
 
 	$('#liquor-tab').on('click',
 		function(e) {
@@ -43,29 +43,28 @@ var alculatorView = new AlculatorView();
 		});
 	});
 
-	$('#bac-submit-btn').on('click', function(e) {
-		e.preventDefault();
-		$calc = $('#alculator');
-		$.ajax({
-			url: "/rounds",
-			method: 'POST',
-			data: { 
-				round: {
-					sex: $calc.find("input[name='name']").val(),
-					lbs: $calc.find("input[name='lbs']").val(),
-					hours: $calc.find("input[name='hours']").val(),
-					abv: $calc.find("input[name='abv']").val(),
-					drinks: $calc.find("input[name='drinks']").val()
-				}
-			},
-			success: function(data) {
-				console.log(data);
-				var round = new Round(data);
+	$('#alculator').on('click', '#bac-submit', function(e){
+    e.preventDefault();
+    $calculator = $('#alculator');
+    $.ajax({
+        url: "/rounds",
+        method: 'POST',
+        data: { round: {
+            sex: $calculator.find("input[name='name']").val(),
+            lbs: $calculator.find("input[name='lbs']").val(),
+            hours: $calculator.find("input[name='hours']").val(),
+            abv: $calculator.find("input[name='abv']").val(),
+            drinks: $calculator.find("input[name='drinks']").val()
+          }
+        },
+      success: function(data) {
+        console.log(data)
+        var round = new Round(data);
         var roundView  = new RoundView({ model: round });
         $('#bac-container').html(roundView.render().$el);
       }
-		});
-	});
+    });
+  });
 
 });
 
