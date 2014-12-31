@@ -4,6 +4,7 @@ $(function() {
 var beerView = new BeerView();
 var bacMeterView = new BacMeterView();
 var alculatorView = new AlculatorView();
+var round = new Round();
 
 	$('#liquor-tab').on('click',
 		function(e) {
@@ -48,13 +49,11 @@ var alculatorView = new AlculatorView();
 			url: "/rounds",
 			method: 'post',
 			data: {
-				round: {
 					sex: $calc.find("input[name='name']").val(),
 					lbs: $calc.find("input[name='lbs']").val(),
 					hours: $calc.find("input[name='hours']").val(),
 					abv: $calc.find("input[name='abv']").val(),
 					drinks: $calc.find("input[name='drinks']").val()
-				}
 			},
 			success: function(data) {
 				console.log(data);	

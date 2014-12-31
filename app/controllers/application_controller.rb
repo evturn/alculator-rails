@@ -21,5 +21,17 @@ class ApplicationController < ActionController::Base
       f.html { render json: beer }
     end
   end
+
+  def rounds
+    round = Round.create(round_params)
+    round.save
+    render json: round
+  end
+
+  private
+
+  def round_params
+    params.require(:round).permit(:drinks, :hours, :sex, :lbs, :abv)
+  end
  
 end
