@@ -6,7 +6,8 @@ class Round < ActionController::Base
     hours  = self.hours
     drinks = self.drinks
     abv    = self.abv
-
+    sex    = self.sex
+    
     rate = sex == "male" ? 0.73 : 0.66
 
     bev_oz = drinks * 12

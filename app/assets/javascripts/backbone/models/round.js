@@ -8,11 +8,7 @@ var Round = Backbone.Model.extend({
 		abv: "",
 		bac: "",
 	},
-	url: '/rounds',
-	render: function() {
-		var roundModel = this.model.toJSON();
-		var roundView = new RoundView({model: roundModel});
-	}
+	url: '/rounds'
 });
 
 console.log('Round');
