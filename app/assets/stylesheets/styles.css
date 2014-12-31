@@ -27,6 +27,12 @@ h3 {
 	text-align: center;
 }
 
+.fit {
+	height: 100px;
+	width: 100px;
+	float: left;
+}
+
 svg {
 	height: 220px;
 }
