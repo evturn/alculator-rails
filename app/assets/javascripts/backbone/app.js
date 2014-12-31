@@ -43,6 +43,15 @@ var alculatorView = new AlculatorView();
 
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault();
+		$alculator = $('#alculator');
+		$.ajax({
+			url: "/rounds",
+			method: 'post',
+			data: {
+				round:
+			}
+
+		});
 		console.log('sup');
 	});
 
