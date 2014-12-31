@@ -1,3 +1,5 @@
+var roundModel = new Round();
+var startRoundView = new RoundView({model: roundModel});
 
 $(function() {
 
@@ -46,7 +48,7 @@ var alculatorView = new AlculatorView();
 		$calc = $('#alculator');
 		$.ajax({
 			url: "/rounds",
-			method: 'post',
+			method: 'POST',
 			data: { 
 				round: {
 					sex: $calc.find("input[name='name']").val(),
@@ -57,7 +59,11 @@ var alculatorView = new AlculatorView();
 				}
 			},
 			success: function(data) {
-				console.log(data);	
+				console.log(data);
+				var round = new Round(data);
+        var roundView  = new RoundView({ model: round });
+        $('#bac-container').html(roundView.render().$el);
+      }
 			}
 		});
 	});
