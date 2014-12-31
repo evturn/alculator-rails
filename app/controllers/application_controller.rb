@@ -22,9 +22,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def rounds
+  def alculator
 
-    
+
   end
  
 end
