@@ -21,10 +21,5 @@ class ApplicationController < ActionController::Base
       f.html { render json: beer }
     end
   end
-
-  def alculator
-    round = Round.create
-    render json: round
-  end
  
 end
