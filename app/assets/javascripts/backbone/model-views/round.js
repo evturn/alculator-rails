@@ -1,10 +1,14 @@
 var RoundView = Backbone.View.extend({
-	tagName: 'div',
+	el: $('#bac-container'),
 	template: _.template($('#bacTemplate').html()),
-	render: function() {
-		this.$el.append(this.template(this.model.toJSON()));
-		return this;
+	initialize: function() {
+		this.render();
 	},
+	url: '/rounds',
+	render: function() {
+		this.$el.html(this.template(this.model.toJSON()));
+		return this;
+	}
 });
 
 console.log('RoundView');
