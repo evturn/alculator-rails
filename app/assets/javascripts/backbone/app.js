@@ -43,16 +43,23 @@ var alculatorView = new AlculatorView();
 
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault();
-		$alculator = $('#alculator');
+		$calc = $('#alculator');
 		$.ajax({
 			url: "/rounds",
 			method: 'post',
 			data: {
-				round:
+				round: {
+					sex: $calc.find("input[name='name']").val(),
+					lbs: $calc.find("input[name='lbs']").val(),
+					hours: $calc.find("input[name='hours']").val(),
+					abv: $calc.find("input[name='abv']").val(),
+					drinks: $calc.find("input[name='drinks']").val()
+				}
+			},
+			success: function(data) {
+				console.log(data);	
 			}
-
 		});
-		console.log('sup');
 	});
 
 });
