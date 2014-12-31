@@ -23,8 +23,8 @@ class ApplicationController < ActionController::Base
   end
 
   def alculator
-
-
+    round = Round.create
+    render json: round
   end
  
 end

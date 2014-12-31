@@ -45,13 +45,12 @@ var bacMeterView = new BacMeterView();
 	
 
 
-	$('#alculator').on('click #bac-submit-btn', 
-		function(e) {
+	$('#bac-submit').on('submit', function(e) {
 			e.preventDefault();
 			$alculator = $('#alculator');
 			$.ajax({
-	        url: "/rounds",
-	        method: 'POST',
+	        url: '/rounds',
+	        method: 'post',
 	        data: { round: {
 						sex:      $alculator.find("input[name='sex']:checked").val(),
 						hours:    $alculator.find("input[name='hours']").val(),
