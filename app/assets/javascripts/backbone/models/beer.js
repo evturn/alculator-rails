@@ -1,13 +1,7 @@
 var Beer = Backbone.Model.extend({
-	defaults: {
-		name: "",
-		desc: "",
-		abv: "",
-		icon: "",
-	},
 	url: '/beers',
 	render: function() {
 		var beerModel = this.model.toJSON();
-		var barTabView new BarTabView({model: beerModel});
+		var barTabView = new BarTabView({model: beerModel});
 	}
 });
