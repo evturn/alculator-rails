@@ -41,6 +41,11 @@ var alculatorView = new AlculatorView();
 		});
 	});
 
+	$('#bac-submit-btn').on('click', function(e) {
+		e.preventDefault();
+		console.log('sup');
+	});
+
 });
 
 console.log('app');
