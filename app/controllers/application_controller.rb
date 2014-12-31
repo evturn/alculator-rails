@@ -21,5 +21,10 @@ class ApplicationController < ActionController::Base
       f.html { render json: beer }
     end
   end
+
+  def rounds
+
+    
+  end
  
 end
