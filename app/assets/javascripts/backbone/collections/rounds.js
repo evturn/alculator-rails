@@ -1,6 +1,6 @@
-var RoundsCollection = Backbone.Collection.extend({
-	model: Round,
-	url: '/rounds'
-});
+// var RoundsCollection = Backbone.Collection.extend({
+// 	model: Round,
+// 	url: '/rounds'
+// });
 
-console.log('Rounds');
+// console.log('Rounds');

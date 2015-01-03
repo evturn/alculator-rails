@@ -38,6 +38,18 @@ var alculatorView = new AlculatorView();
 		});
 	});
 
+
+	$('#bac-submit-btn').on('click', function(e) {
+		e.preventDefault();
+		var sex = document.getElementById('sex').value;
+		var lbs = document.getElementById('lbs').value;
+		var hours = document.getElementById('hours').value;
+		var drinks = document.getElementById('drinks').value;
+		var abv = document.getElementById('abv').value;	
+		var round = new Round({sex: sex, lbs: lbs, hours: hours, drinks: drinks, abv: abv});
+		});
+	});
+
 	function calculate() {
 		var rate = sex === 'male' ? 0.73 : 0.66;
 		var bevOz = drinks * 12;
@@ -48,17 +60,4 @@ var alculatorView = new AlculatorView();
 		var soberingRate = 0.015 * hours;
 		var bac = subLevel - soberingRate;
 	};
-
-	$('#bac-submit-btn').on('click', function(e) {
-		e.preventDefault();
-		var sex = document.getElementById('sex').value;
-		var lbs = document.getElementById('lbs').value;
-		var hours = document.getElementById('hours').value;
-		var drinks = document.getElementById('drinks').value;
-		var abv = document.getElementById('abv').value;	
-		// var round = new Round({sex: sex, lbs: lbs, hours: hours, drinks: drinks, abv: abv});
-		});
-		// round.calculate();
-	});
-
 console.log('app');
