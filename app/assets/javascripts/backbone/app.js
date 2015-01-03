@@ -39,25 +39,29 @@ var alculatorView = new AlculatorView();
 	});
 
 
-	$('#bac-submit-btn').on('click', function(e) {
-		e.preventDefault();
-		var sex = document.getElementById('sex').value;
-		var lbs = document.getElementById('lbs').value;
-		var hours = document.getElementById('hours').value;
-		var drinks = document.getElementById('drinks').value;
-		var abv = document.getElementById('abv').value;	
-		var round = new Round({sex: sex, lbs: lbs, hours: hours, drinks: drinks, abv: abv});
-		});
+	$('#bac-submit-btn').on('click', function() {
+		console.log('Heeyutz!');
+		lbs = document.getElementById('lbs').value;
+		hours = document.getElementById('hours').value;
+		drinks = document.getElementById('drinks').value;
+		abv = document.getElementById('abv').value;	
+		sex = document.getElementById('male').value;
+		console.log(lbs);
+		console.log(hours);
+		console.log(drinks);
+		console.log(abv);
+		console.log(sex);
+		rate = sex === 'male' ? 0.73 : 0.66;
+		bevOz = drinks * 12;
+		alcOz = bevOz * (abv * 0.01);
+		metricOz = alcOz * 5.14;
+		metabolism = lbs * rate;
+		subLevel = metricOz /  metabolism;
+		soberingRate = 0.015 * hours;
+		bac = subLevel - soberingRate;
+		return bac;
+		
+	});
 	});
 
-	function calculate() {
-		var rate = sex === 'male' ? 0.73 : 0.66;
-		var bevOz = drinks * 12;
-		var alcOz = bevOz * (abv * 0.01);
-		var metricOz = alcOz * 5.14;
-		var metabolism = lbs * rate;
-		var subLevel = metricOz /  metabolism;
-		var soberingRate = 0.015 * hours;
-		var bac = subLevel - soberingRate;
-	};
 console.log('app');
