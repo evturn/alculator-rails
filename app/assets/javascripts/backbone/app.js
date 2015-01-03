@@ -1,9 +1,9 @@
-
 $(function() {
 
 var beerView = new BeerView();
 var bacMeterView = new BacMeterView();
 var alculatorView = new AlculatorView();
+
 
 	$('#liquor-tab').on('click',
 		function(e) {
@@ -39,18 +39,14 @@ var alculatorView = new AlculatorView();
 	});
 
 
-	$('#bac-submit-btn').on('click', function() {
+	$('#bac-submit-btn').on('click', function(e) {
+		e.preventDefault;
 		console.log('Heeyutz!');
 		lbs = document.getElementById('lbs').value;
 		hours = document.getElementById('hours').value;
 		drinks = document.getElementById('drinks').value;
 		abv = document.getElementById('abv').value;	
 		sex = document.getElementById('male').value;
-		console.log(lbs);
-		console.log(hours);
-		console.log(drinks);
-		console.log(abv);
-		console.log(sex);
 		rate = sex === 'male' ? 0.73 : 0.66;
 		bevOz = drinks * 12;
 		alcOz = bevOz * (abv * 0.01);
@@ -59,9 +55,17 @@ var alculatorView = new AlculatorView();
 		subLevel = metricOz /  metabolism;
 		soberingRate = 0.015 * hours;
 		bac = subLevel - soberingRate;
+		console.log(lbs);
+		console.log(hours);
+		console.log(drinks);
+		console.log(abv);
+		console.log(sex);
 		return bac;
-		
-	});
+		var round = new Round({});
+		var roundView = new RoundView({});
+		});
+	
+
 	});
 
 console.log('app');

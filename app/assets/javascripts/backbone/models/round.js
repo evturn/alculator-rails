@@ -5,6 +5,7 @@ var Round = Backbone.Model.extend({
 		lbs: '',
 		drinks: '',
 		abv: '',
+		bac: '',
 	}
 });
 
