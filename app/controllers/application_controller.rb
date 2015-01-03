@@ -22,11 +22,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def rounds
-    round = Round.find params[:id]
-    round.update_attributes params
-    render :json => round
-  end
-
- 
 end

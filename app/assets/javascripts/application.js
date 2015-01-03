@@ -15,6 +15,7 @@
 //= require d3
 //= require underscore
 //= require backbone
+//= require backbone.localStorage
 //= require_tree ./backbone/models/
 //= require_tree ./backbone/collections/
 //= require_tree ./backbone/model-views/

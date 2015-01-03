@@ -1,13 +1,15 @@
 var RoundView = Backbone.View.extend({
 	el: $('#bac-container'),
 	model: Round,
+	url: '/url',
 	template: _.template($('#bacTemplate').html()),
 	initialize: function() {
 		this.render();
 	},
 	render: function() {
-		this.$el.html(this.template());
-		return this;
+		var attributes = this.model.toJSON();
+    this.$el.append(this.template(attributes));
+    return this;
 	}
 });
 
